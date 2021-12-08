@@ -1,11 +1,12 @@
-name: my-actions
+name: My-actions
 
-on: 
+on:
   push:
     branches:
       - main
   pull_request:
-    - main
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
