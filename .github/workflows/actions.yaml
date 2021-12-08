@@ -1,0 +1,27 @@
+name: my-actions
+
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    - main
+  workflow_dispatch:
+
+jobs:
+  my-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: my-action
+        run: echo "Running my action"
+        shell: bash
+
+  my-action-finished:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: my-action-finished
+        run: echo "My action finished"
+        shell: bash
+
